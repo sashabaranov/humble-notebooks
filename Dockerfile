@@ -1,7 +1,7 @@
 FROM jupyterhub/singleuser:latest
 
 RUN pip install numpy scipy matplotlib ipywidgets scikit-learn
-RUN pip install pip install git+https://github.com/sashabaranov/nbgrader.git@0.5.x
+RUN pip install nbgrader
 
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 RUN jupyter nbextension install --sys-prefix --py nbgrader --overwrite
